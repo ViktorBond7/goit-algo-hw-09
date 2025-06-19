@@ -1,5 +1,4 @@
-
-def find_min_coins(amount):
+def find_min_coins(amount, denominations = [50, 25, 10, 5, 2, 1]):
     # Ініціалізація: dp[i] — мінімальна кількість монет для суми i
     dp = [float('inf')] * (amount + 1)
     dp[0] = 0  # для суми 0 потрібно 0 монет
@@ -27,8 +26,5 @@ def find_min_coins(amount):
 
 
 if __name__ == "__main__":
-   
-   denominations = [50, 25, 10, 5, 2, 1]
    result = find_min_coins(113)
-
    print(result)
